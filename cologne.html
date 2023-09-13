@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cologne Reselling</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./img/logo.png" alt="CLKRESELLING Logo">
+        </div>
+        
+        <h1>Cologne Reselling</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">AirPods</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#" id="open-cart-link">Open Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products">
+        <!-- Cologne Product 1 -->
+        <article class="product">
+            <img src="./img/dior.jpeg" alt="Dior Sauvage">
+            <h2>Dior Sauvage</h2>
+            <p></p>
+            <span class="price">$100</span><br>
+            <br>
+            <button class="add-to-cart" data-product="Dior Sauvage" data-price="100">Add to Cart</button>
+        </article>
+
+        <!-- Cologne Product 2 -->
+        <article class="product">
+            <img src="./img/bdc.png" alt="Bleu de Chanel">
+            <h2>Bleu de Chanel</h2>
+            <p></p>
+            <span class="price">$50</span> <br>
+            <br>
+            <button class="add-to-cart" data-product="Bleu de Chanel" data-price="50">Add to Cart</button>
+        </article>
+
+        <!-- Cologne Product 3 -->
+        <article class="product">
+            <img src="./img/ysl-intense.png" alt="Yves Saint Laurent Intense">
+            <h2>YSL Intense</h2>
+            <p></p>
+            <span class="price">$45</span><br>
+            <br>
+            <button class="add-to-cart" data-product="YSL Intense" data-price="45">Add to Cart</button>
+        </article>
+
+        <article class="product">
+            <img src="./img/adg.png" alt="Acqua Di Gio">
+            <h2>Acqua Di Gio</h2>
+            <p></p>
+            <span class="price">$40</span><br>
+            <br>
+            <button class="add-to-cart" data-product="Acqua Di Gio" data-price="40">Add to Cart</button>
+        </article>
+    </section>
+
+    <!-- ... Your existing HTML code ... -->
+
+    <div class="modal-overlay" id="cart-overlay"></div>
+    <div class="cart-modal" id="cart-modal">
+        <span class="close-cart" id="close-cart">&times;</span>
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <hr> <!-- Horizontal line to separate items and tip -->
+            <div>
+                <label for="tip-input">Add a Tip:</label>
+                <input type="number" id="tip" class="tip-amount" placeholder="0.00" value="0.00" step="0.01">
+            </div>
+            <div id="cart-total-container">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+
+            <!-- Promo Code Section -->
+            <div class="promo-code">
+                <input type="text" id="promo-code-input" placeholder="Enter Promo Code">
+                <button id="apply-promo-code">Apply</button>
+            </div>
+
+            <!-- Remove Items Section -->
+            <div class="remove-items">
+                <button id="remove-all-items">Remove All Items</button>
+            </div>
+
+            <button class="continue-shopping">Continue Shopping</button>
+            <button class="checkout">Checkout</button>
+        </div>
+    </div>
+
+    <div id="notification-message" class="notification hidden">
+        <div class="notification-content">
+            <span id="notification-text">Added to cart!</span>
+        </div>
+    </div>
+    <div id="whatsapp-notification" class="hidden">
+        <div class="whatsapp-notification-content">
+            <img src="./img/whatsapp-icon.png" alt="WhatsApp Icon" class="whatsapp-icon">
+            <p class="whatsapp-message">Added to cart: <span id="added-product"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+</body>
+<footer>
+    <p>&copy; 2023 CLK Reselling</p>
+</footer>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./img/logo.png" alt="CLKRESELLING Logo">
+        </div>
+
+        <h1>About Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">AirPods</a></li>
+                <li><a href="cologne.html">Cologne</a></li>
+                <li><a href="#" id="open-cart-link">Open Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h2>Who We Are</h2>
+        <p>We are a trio of passionate individuals hailing from South Africa, dedicated to the art of recycling and reselling. Our journey begins with sourcing used AirPods, carefully refurbishing them, and then presenting them to you in their best possible condition.</p>
+        
+        <h2>Our Mission</h2>
+        <p>Our mission is to give new life to pre-owned products, reducing waste and environmental impact. We take pride in providing quality items at affordable prices, making sustainable living accessible to everyone.</p>
+        
+        <h2>Our Products</h2>
+        <p>Our products are then repackaged into fake boxes for shipping, to avoid customs. The cologne is original, we just ship it in a different box because we are not an official supplier. If you're interested in the original packaging, please reach out to us via email: clk.reselling@gmail.com</p>
+        
+        <h2>Negotiation</h2>
+        <p>We believe in fair pricing and are open to negotiation. If you find an item that catches your eye, feel free to reach out to us, and we'll do our best to accommodate your budget.</p>
+
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you!</p>
+        <div class="contact-info">
+            <ul>
+                <li>Instagram: <a href="https://www.instagram.com/clk_reselling/" class="socials">@clk_reselling</a></li>
+                <li>Whatsapp: <a href="https://wa.me/+27781716153/" id="whatsapp-no" class="socials">+27781716153</a></li>
+                <li>Facebook: <a href="https://www.facebook.com/" class="socials">username</a></li>
+                <li>Email: <a href="mailto:clk.reselling@gmail.com" id="email-add" class="socials">clk.reselling@gmail.com</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ... Your existing HTML code ... -->
+
+    <div class="modal-overlay" id="cart-overlay"></div>
+    <div class="cart-modal" id="cart-modal">
+        <span class="close-cart" id="close-cart">&times;</span>
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <hr> <!-- Horizontal line to separate items and tip -->
+            <div>
+                <label for="tip-input">Add a Tip:</label>
+                <input type="number" id="tip" class="tip-amount" placeholder="0.00" value="0.00" step="0.01">
+            </div>
+            <div id="cart-total-container">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+
+            <!-- Promo Code Section -->
+            <div class="promo-code">
+                <input type="text" id="promo-code-input" placeholder="Enter Promo Code">
+                <button id="apply-promo-code">Apply</button>
+            </div>
+
+            <!-- Remove Items Section -->
+            <div class="remove-items">
+                <button id="remove-all-items">Remove All Items</button>
+            </div>
+
+            <button class="continue-shopping">Continue Shopping</button>
+            <button class="checkout">Checkout</button>
+        </div>
+    </div>
+
+    <div id="notification-message" class="notification hidden">
+        <div class="notification-content">
+            <span id="notification-text">Added to cart!</span>
+        </div>
+    </div>
+    <div id="whatsapp-notification" class="hidden">
+        <div class="whatsapp-notification-content">
+            <img src="./img/whatsapp-icon.png" alt="WhatsApp Icon" class="whatsapp-icon">
+            <p class="whatsapp-message">Added to cart: <span id="added-product"></span></p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+    <footer>
+        <p>&copy; 2023 CLK Reselling</p>
+    </footer>
+</body>
+</html>

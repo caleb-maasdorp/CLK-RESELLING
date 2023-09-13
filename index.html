@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLK RESELLING</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add a link to Font Awesome if you're using it for the moon icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./img/logo.png" alt="CLKRESELLING Logo">
+        </div>
+
+        <h1>Airpods Reselling</h1>
+        <nav>
+            <ul>
+                <li><a href="cologne.html">Cologne</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#" id="open-cart-link">Open Cart</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="products">
+        <article class="product">
+            <img src="./img/airpod2.png" alt="AirPods 2nd Gen">
+            <h2>AirPods 2nd Gen</h2>
+            <p></p>
+            <span class="price">$50</span><br>
+            <br>
+            <button class="add-to-cart" data-product="AirPods 2nd Gen" data-price="50">Add to Cart</button>
+        </article>
+
+        <article class="product">
+            <img src="./img/airpod pro.png" alt="AirPods Pro">
+            <h2>AirPods Pro</h2>
+            <p></p>
+            <span class="price">$75</span> <br>
+            <br>
+            <button class="add-to-cart" data-product="AirPods Pro" data-price="75">Add to Cart</button>
+        </article>
+
+        <article class="product">
+            <img src="./img/airpod pro3.png" alt="AirPods Pro 3">
+            <h2>AirPods Pro 3</h2>
+            <p></p>
+            <span class="price">$100</span><br>
+            <br>
+            <button class="add-to-cart" data-product="Airpods Pro 3" data-price="100">Add to Cart</button>
+        </article>
+
+        <article class="product">
+            <img src="./img/airpods max.png" alt="AirPods Max">
+            <h2>AirPods Max</h2>
+            <p></p>
+            <span class="price">$450</span><br>
+            <br>
+            <button class="add-to-cart" data-product="Airpods Max" data-price="450">Add to Cart</button>
+        </article>
+
+        <!-- Add more product articles here -->
+    </section>
+
+    <!-- Add a modal container -->
+    <div class="modal-overlay" id="cart-overlay"></div>
+    <div class="cart-modal" id="cart-modal">
+        <span class="close-cart" id="close-cart">&times;</span>
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <hr> <!-- Horizontal line to separate items and tip -->
+            <div>
+                <label for="tip-input">Add a Tip:</label>
+                <input type="number" id="tip" class="tip-amount" placeholder="0.00" value="0.00" step="0.01">
+            </div>
+            <div id="cart-total-container">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+
+            <!-- Promo Code Section -->
+            <div class="promo-code">
+                <input type="text" id="promo-code-input" placeholder="Enter Promo Code">
+                <button id="apply-promo-code">Apply</button>
+            </div>
+
+            <!-- Remove Items Section -->
+            <div class="remove-items">
+                <button id="remove-all-items">Remove All Items</button>
+            </div>
+
+            <button class="continue-shopping">Continue Shopping</button>
+            <button class="checkout">Checkout</button>
+        </div>
+    </div>
+
+<!--    <button class="open-cart">Open Cart</button>
+    <button class="close-cart">Close Cart</button> -->
+    <!-- Add this HTML structure for the notification message -->
+    <div id="notification-message" class="notification hidden">
+        <div class="notification-content">
+            <span id="notification-text">Added to cart!</span>
+        </div>
+    </div>
+    <div id="whatsapp-notification" class="hidden">
+        <div class="whatsapp-notification-content">
+            <img src="./img/whatsapp-icon.png" alt="WhatsApp Icon" class="whatsapp-icon">
+            <p class="whatsapp-message">Added to cart: <span id="added-product"></span></p>
+        </div>
+    </div>
+    
+
+    
+</body>
+<footer>
+    <p>&copy; 2023 CLK Reselling</p>
+</footer>
+<script src="script.js"></script>
+</html>

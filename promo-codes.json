@@ -1,0 +1,5 @@
+[
+    { "code": "STORY5", "discount": 0.05 },
+    { "code": "REVIEW20", "discount": 0.2 },
+    { "code": "AFFILIATE10", "discount": 0.1 }
+]
